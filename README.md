@@ -2,26 +2,45 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Project Specifications
 
-## Code scaffolding
+- Create a Web-Site that acts both as a mobile and desktop optimized web-page to display products
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- between two different styles of views as seen in the mocks below via a button at
+  the top bar
 
-## Build
+- offers a button to sort the result by price and toggle ascending and descending order.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- offers a toggle button to filter out beers which are more expensive than 2 euro per litre.
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Desktop Version
 
-## Running end-to-end tests
+- HomePage
+  ![Desktop](./src/assets/desktop-version.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Home Page
+  ![Tablet](./src/assets/ipad-version.png)
+- Home Page
+  ![mobile](./src/assets/mobile-version.png)
 
-## Further help
+## My process
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Home Page
+- Login Page
+- Movie Info Page
+- Seat Selection Page
+- Date Time Selection Page
+- Booking History
+  -Food Offers Page
+- Confirmation Page
+
+### Built with
+
+- Semantic HTML5 markup
+- Typescript
+- Angular CLI
+- sCSS
