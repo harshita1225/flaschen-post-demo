@@ -1,6 +1,7 @@
 {
   "name": "flaschen-post",
   "version": "0.0.0",
+  "homepage": "https://harshita1225.github.io/flaschen-post-demo/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
