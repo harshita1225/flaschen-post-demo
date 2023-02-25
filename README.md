@@ -19,13 +19,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 #### Desktop Version
 
-- HomePage
+- DESKTOP VERSION DETAIL VIEW
   ![Desktop](./src/assets/desktop-version.png)
 
-- Home Page
+- TABLET VERSION DETAIL VIEW
   ![Tablet](./src/assets/ipad-version.png)
-- Home Page
+
+- MOBILE VERSION DETAIL VIEW
   ![mobile](./src/assets/mobile-version.png)
+
+  - DESKTOP VERSION TOGGLE VIEW
+    ![Desktop](./src/assets/toggle-view-desktop-version.png)
 
 ## My process
 
