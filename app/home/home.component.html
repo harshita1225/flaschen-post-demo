@@ -1,0 +1,76 @@
+<div class="home-page">
+  <div class="filter-container">
+    <div class="filter-buttons">
+      <button class="filter-button" (click)="DisplayAll()">All Products</button>
+      <button class="filter-button" (click)="filterDisplay()">Above 2€</button>
+      <button class="filter-button" (click)="sort('price')">
+        Sort by Price
+      </button>
+      <button class="filter-button" (click)="sort('name')">Sort by Name</button>
+
+      <button class="filter-button" (click)="toggleDisplay()">
+        Toggle display
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="!isShowDiv1" class="homepage-container1">
+    <div class="homepage-sub-container">
+      <div
+        class="allproducts"
+        *ngFor="
+          let i of article || [] | filter : filterText | orderBy : key : reverse
+        "
+      >
+        <div class="product">
+          <div>
+            <div class="cards">
+              <div class="img-container">
+                <img [src]="i?.image" alt="{{ i.shortDescription }}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isShowDiv2" class="homepage-container2">
+    <div class="homepage-sub-container-dview">
+      <div
+        class="allproducts-dview"
+        *ngFor="let p of product | orderBy : 'name' : reverse"
+      >
+        <div
+          class="product-dview"
+          *ngFor="
+            let i of article || []
+              | filter : filterText
+              | orderBy : key : reverse
+          "
+        >
+          <div class="cards-dview">
+            <div class="img-container-dview">
+              <img src="{{ i?.image }}" alt="{{ p.name }}" />
+            </div>
+            <div>
+              <div class="card-content-dview">
+                <div>
+                  <p id="name">{{ p.name }}</p>
+                  <p id="brandname">{{ p.brandName }}</p>
+                </div>
+                <div class="units">
+                  <p>{{ i.shortDescription }}</p>
+                </div>
+                <div class="price">
+                  <p id="price">{{ i.price | currency }}</p>
+                  <p id="unit">{{ i.pricePerUnitText }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
