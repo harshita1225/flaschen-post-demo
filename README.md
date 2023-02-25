@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
+Live Site URL: [https://harshita1225.github.io/flaschen-post-demo/](https://harshita1225.github.io/flaschen-post-demo/)
+
 ## Overview
 
 ### Project Specifications
@@ -15,32 +17,34 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - offers a toggle button to filter out beers which are more expensive than 2 euro per litre.
 
+### Project Instructions
+
+- npm i to install all packages
+- ng serve -o (run script)
+
 ### Screenshot
 
-#### Desktop Version
+### DESKTOP VERSION DETAIL VIEW
 
-- DESKTOP VERSION DETAIL VIEW
-  ![Desktop](./src/assets/desktop-version.png)
+![Desktop](./src/assets/desktop-version.png)
 
-- TABLET VERSION DETAIL VIEW
-  ![Tablet](./src/assets/ipad-version.png)
+### TABLET VERSION DETAIL VIEW
 
-- MOBILE VERSION DETAIL VIEW
-  ![mobile](./src/assets/mobile-version.png)
+![Tablet](./src/assets/ipad-version.png)
 
-  - DESKTOP VERSION TOGGLE VIEW
-    ![Desktop](./src/assets/toggle-view-desktop-version.png)
+### MOBILE VERSION DETAIL VIEW
+
+![mobile](./src/assets/mobile-version.png)
+
+### DESKTOP VERSION TOGGLE VIEW
+
+![Desktop](./src/assets/toggle-view-desktop-version.png)
 
 ## My process
 
-- Home Page
-- Login Page
-- Movie Info Page
-- Seat Selection Page
-- Date Time Selection Page
-- Booking History
-  -Food Offers Page
-- Confirmation Page
+- Nav Bar
+- Card Container
+- filer and sorting buttons
 
 ### Built with
 
