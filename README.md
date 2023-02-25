@@ -51,4 +51,4 @@ Live Site URL: [https://harshita1225.github.io/flaschen-post-demo/](https://hars
 - Semantic HTML5 markup
 - Typescript
 - Angular CLI
-- sCSS
+- SCSS
