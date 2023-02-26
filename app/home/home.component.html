@@ -63,7 +63,8 @@
                   <p>{{ i.shortDescription }}</p>
                 </div>
                 <div class="price">
-                  <p id="price">{{ i.price | currency }}</p>
+                  <p id="price">{{ i.price | currency : "EUR" : true }}</p>
+                  <!-- currency in EURO -->
                   <p id="unit">{{ i.pricePerUnitText }}</p>
                 </div>
               </div>
