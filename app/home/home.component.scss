@@ -1,19 +1,22 @@
 .home-page {
-  min-width: 375px;
+  min-width: 320px;
   max-width: 1260px;
   margin: 0 auto;
 }
 //styles of detail view container
 
 .homepage-sub-container-dview {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border: 1px solid yellow;
 }
 .allproducts-dview {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border: 1px solid green;
 }
 
 .product-dview {
@@ -171,7 +174,8 @@
   }
 
   .product-dview {
-    width: 25rem;
+    width: 50%;
+    min-width: 17rem;
     height: 15rem;
     display: flex;
     justify-content: center;

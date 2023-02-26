@@ -4,7 +4,7 @@ header {
   border-bottom: 1px solid rgb(150, 7, 78);
   height: 4rem;
   max-width: 1260px;
-  min-width: 400px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -16,6 +16,28 @@ header {
   width: 15rem;
   //width: 22%;
 }
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  height: 4rem;
+  align-items: center;
+}
+
+#icons {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+#icons li {
+  color: rgb(104, 187, 104);
+}
+
+// media queries for header
 
 @media (max-width: 800px) {
   .logo img {
@@ -35,22 +57,13 @@ header {
     gap: 0.5rem;
   }
 }
-.container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1260px;
-  height: 4rem;
-  align-items: center;
-}
 
-#icons {
-  list-style-type: none;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: space-evenly;
-}
-
-#icons li {
-  color: rgb(104, 187, 104);
+@media (max-width: 300px) {
+  .logo img {
+    width: 10rem;
+  }
+  #icons {
+    justify-content: center;
+    gap: 5px;
+  }
 }
