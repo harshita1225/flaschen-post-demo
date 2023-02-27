@@ -2,34 +2,38 @@ import { Injectable } from '@angular/core';
 import { PRODUCTS } from '../../mock-products';
 import { Product } from 'src/app/shared/models/Product';
 import { Article } from 'src/app/shared/models/Article';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { ProductArticle } from 'src/app/shared/models/ProductArticle';
+
 @Injectable({
   providedIn: 'root',
 })
 export class DrinkService {
-  NewArray: any;
-  NestedArray: any;
   private output: Article[] = [];
+
   constructor() {}
 
-  getAllProducts(): Product[] {
+  /*getAllProducts(): Product[] {
     return PRODUCTS;
-  }
-
-  /* getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(
-      'https://flapotest.blob.core.windows.net/test/ProductData.json'
-    );
   }*/
 
+  flattenArticles(product: Product): ProductArticle[] {
+    return product.articles.map((article) => ({
+      ...product,
+      ...article,
+    }));
+  }
+
+  getAllProducts(products: Product[]): ProductArticle[] {
+    const flattenedProducts = products.flatMap(this.flattenArticles);
+    return flattenedProducts;
+  }
   getNewArray(): Article[] {
     let result = PRODUCTS.map((product) =>
       product.articles.map((article) => {
         this.output.push(article);
       })
     );
-    console.log(this.output);
+    // console.log(this.output);
     return this.output;
   }
 }

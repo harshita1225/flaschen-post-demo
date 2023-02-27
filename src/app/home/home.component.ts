@@ -16,16 +16,12 @@ export class HomeComponent implements OnInit {
   constructor(
     private drinkService: DrinkService,
     private route: ActivatedRoute,
-    private orderPipe: OrderPipe
-  ) {
-    console.log(this.orderPipe.transform(this.article, this.order));
-  }
+    private orderPipe: OrderPipe,
+    private sortPipe: SortPipe
+  ) {}
 
   product: Product[] = [];
   article: Article[] = [];
-
-  order: string = 'unit';
-  filterText: string = '';
 
   isShowDiv1 = false;
   isShowDiv2 = true;
@@ -41,20 +37,18 @@ export class HomeComponent implements OnInit {
     this.reverse = !this.reverse;
   }
 
+  filterText: number = 0;
   DisplayAll() {
-    this.filterText = '';
+    this.filterText = 0;
   }
 
   filterDisplay() {
-    this.filterText = '2,';
+    this.filterText = 2;
   }
 
   ngOnInit(): void {
-    this.product = this.drinkService.getAllProducts();
-    /*  this.drinkService.getAllProducts().subscribe((products) => {
-      this.product = products;
-    });
- */
+    this.product = this.drinkService.getAllProducts(PRODUCTS);
+    console.log(this.product);
     this.article = this.drinkService.getNewArray();
   }
 }
