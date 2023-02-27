@@ -10,15 +10,17 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  //border: 1px solid yellow;
 }
 .allproducts-dview {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  //border: 1px solid green;
 }
 
 .product-dview {
-  border: 1px solid rgb(214, 50, 132);
+  border: 2px solid rgb(214, 50, 132);
   width: 45rem;
   height: 20rem;
   margin: 0 auto;
@@ -26,11 +28,17 @@
 }
 .cards-dview {
   display: flex;
+  width: 40rem;
   align-items: center;
+  //border: 1px solid purple;
 }
 
+.card-content-dview {
+  width: 25rem;
+}
 .img-container-dview {
   padding: 2rem;
+  //border: 1px solid red;
 }
 
 .img-container-dview img {
@@ -81,6 +89,10 @@
   background: whitesmoke;
   color: rgb(214, 50, 132);
 }
+.filter-button:focus {
+  background: rgb(82, 13, 47);
+}
+
 .filter-container {
   max-width: 1260px;
   display: flex;
@@ -151,7 +163,9 @@
     justify-content: center;
     gap: 2rem;
   }
-
+  .cards-dview {
+    width: 30rem;
+  }
   .img-container-dview img {
     width: 5rem;
   }
@@ -179,11 +193,14 @@
     justify-content: center;
     font-size: 12px;
   }
-  .img-container-dview {
-    padding: 1.5rem;
+  .card-content-dview {
+    width: 10rem;
+  }
+  #name {
+    font-size: 16px;
   }
   .img-container-dview img {
-    width: 3.2rem;
+    width: 3rem;
   }
   .cards-dview {
     width: 25rem;

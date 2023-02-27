@@ -24,7 +24,7 @@ import {
     FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, OrderModule, FontAwesomeModule],
-  providers: [],
+  providers: [SortPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

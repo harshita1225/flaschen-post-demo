@@ -5,10 +5,15 @@ import { Product } from '../shared/models/Product';
   name: 'sortBy',
 })
 export class SortPipe implements PipeTransform {
-  transform(article: Article[], sortText: string): any {
-    if (sortText)
-      article.sort((a: any, b: any) => (a[sortText] > b[sortText] ? 1 : -1));
-    else article.sort((a, b) => (a > b ? 1 : -1));
-    return article;
+  transform(articles: Article[], isAscending: boolean): any {
+    const sortedArticles = [...articles]; // make a copy of the array
+
+    if (isAscending) {
+      console.log(sortedArticles.sort((a, b) => a.price - b.price));
+      return sortedArticles.sort((a, b) => a.price - b.price);
+    } else {
+      console.log(sortedArticles.sort((a, b) => b.price - a.price));
+      return sortedArticles.sort((a, b) => b.price - a.price);
+    }
   }
 }
