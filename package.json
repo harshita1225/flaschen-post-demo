@@ -4,8 +4,9 @@
   "homepage": "https://harshita1225.github.io/flaschen-post-demo/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve -o",
+    "build": "ng build --configuration=production",
+    "deploy": "ng deploy --base-href=/flaschen-post-demo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

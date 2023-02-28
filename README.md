@@ -20,7 +20,8 @@ Live Site URL: [https://harshita1225.github.io/flaschen-post-demo/](https://hars
 ### Project Instructions
 
 - npm i to install all packages
-- ng serve -o (run script)
+- npm run build
+- npm start (run script)
 
 ### Screenshot
 
