@@ -27,6 +27,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@material/card": "^14.0.0",
+    "bootstrap": "^5.2.3",
     "ngx-order-pipe": "^2.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
