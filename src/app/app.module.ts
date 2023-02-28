@@ -9,7 +9,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { OrderPipe } from 'ngx-order-pipe';
-
+import { HttpClientModule } from '@angular/common/http';
 import {
   FontAwesomeModule,
   FaIconLibrary,
@@ -23,7 +23,13 @@ import {
     SortPipe,
     FilterPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, OrderModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    OrderModule,
+    FontAwesomeModule,
+    HttpClientModule,
+  ],
   providers: [SortPipe],
   bootstrap: [AppComponent],
 })
