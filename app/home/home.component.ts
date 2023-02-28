@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PRODUCTS } from '../mock-products';
 import { SortPipe } from '../pipes/sort.pipe';
 import { OrderPipe } from 'ngx-order-pipe';
-
+import { ProductArticle } from 'src/app/shared/models/ProductArticle';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,8 +20,9 @@ export class HomeComponent implements OnInit {
     private sortPipe: SortPipe
   ) {}
 
-  product: Product[] = [];
-  article: Article[] = [];
+  // product: Product[] = [];
+  // article: Article[] = [];
+  flatproduct: ProductArticle[] = [];
 
   isShowDiv1 = false;
   isShowDiv2 = true;
@@ -47,8 +48,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.product = this.drinkService.getAllProducts(PRODUCTS);
-    console.log(this.product);
-    this.article = this.drinkService.getNewArray();
+    //this.product = this.drinkService.getAllProducts(PRODUCTS);
+    //console.log(this.product);
+    /* this.drinkService
+      .getAllProduct()
+      .subscribe((product) => (this.product = product));*/
+
+    this.drinkService.getAllProduct().subscribe((products: Product[]) => {
+      const flattenedProducts = this.drinkService.getAllProducts(products);
+      this.flatproduct = flattenedProducts;
+    });
+    //this.article = this.drinkService.getNewArray();
   }
 }
